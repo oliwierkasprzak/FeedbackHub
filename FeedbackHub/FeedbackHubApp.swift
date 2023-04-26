@@ -13,9 +13,15 @@ struct FeedbackHubApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
-                .environmentObject(dataController)
+            NavigationSplitView {
+                SideBarView()
+            } content: {
+                ContentView()
+            } detail: {
+                DetailView()
+            }
+            .environment(\.managedObjectContext, dataController.container.viewContext)
+            .environmentObject(dataController)
         }
     }
 }
