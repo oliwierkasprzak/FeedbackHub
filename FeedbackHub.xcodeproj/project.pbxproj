@@ -11,6 +11,8 @@
 		4FCC591A29F8602B003B87A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC591929F8602B003B87A8 /* ContentView.swift */; };
 		4FCC591C29F8602D003B87A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC591B29F8602D003B87A8 /* Assets.xcassets */; };
 		4FCC592029F8602D003B87A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC591F29F8602D003B87A8 /* Preview Assets.xcassets */; };
+		4FCC592829F8627C003B87A8 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC592629F8627C003B87A8 /* Main.xcdatamodeld */; };
+		4FCC592A29F86756003B87A8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC592929F86756003B87A8 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		4FCC591B29F8602D003B87A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FCC591D29F8602D003B87A8 /* FeedbackHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedbackHub.entitlements; sourceTree = "<group>"; };
 		4FCC591F29F8602D003B87A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FCC592729F8627C003B87A8 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		4FCC592929F86756003B87A8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				4FCC591729F8602B003B87A8 /* FeedbackHubApp.swift */,
 				4FCC591929F8602B003B87A8 /* ContentView.swift */,
+				4FCC592629F8627C003B87A8 /* Main.xcdatamodeld */,
+				4FCC592929F86756003B87A8 /* DataController.swift */,
 				4FCC591B29F8602D003B87A8 /* Assets.xcassets */,
 				4FCC591D29F8602D003B87A8 /* FeedbackHub.entitlements */,
 				4FCC591E29F8602D003B87A8 /* Preview Content */,
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCC592829F8627C003B87A8 /* Main.xcdatamodeld in Sources */,
+				4FCC592A29F86756003B87A8 /* DataController.swift in Sources */,
 				4FCC591A29F8602B003B87A8 /* ContentView.swift in Sources */,
 				4FCC591829F8602B003B87A8 /* FeedbackHubApp.swift in Sources */,
 			);
@@ -354,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4FCC592629F8627C003B87A8 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4FCC592729F8627C003B87A8 /* Main.xcdatamodel */,
+			);
+			currentVersion = 4FCC592729F8627C003B87A8 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4FCC590C29F8602B003B87A8 /* Project object */;
 }
