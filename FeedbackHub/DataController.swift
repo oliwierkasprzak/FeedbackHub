@@ -35,12 +35,12 @@ class DataController: ObservableObject {
     func sampleData() {
         let viewContext = container.viewContext
         
-        for i in 0...5 {
+        for i in 1...5 {
             let tag = Tag(context: viewContext)
             tag.id = UUID()
             tag.name = "Tag \(i)"
             
-            for j in 0...10 {
+            for j in 1...10 {
                 let issue = Issue(context: viewContext)
                 issue.title = "Issue \(i)-\(j)"
                 issue.content = "Description to be created"
