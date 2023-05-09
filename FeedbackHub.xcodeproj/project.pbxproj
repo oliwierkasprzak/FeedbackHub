@@ -18,6 +18,7 @@
 		4FCC593029F96B0C003B87A8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC592F29F96B0C003B87A8 /* Filter.swift */; };
 		4FCC593229FA6E97003B87A8 /* Issue-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC593129FA6E97003B87A8 /* Issue-CoreDataHelper.swift */; };
 		4FCC593429FA6E9F003B87A8 /* Tag-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC593329FA6E9F003B87A8 /* Tag-CoreDataHelper.swift */; };
+		4FCC59362A0A4508003B87A8 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59352A0A4508003B87A8 /* IssueRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4FCC592F29F96B0C003B87A8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		4FCC593129FA6E97003B87A8 /* Issue-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		4FCC593329FA6E9F003B87A8 /* Tag-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelper.swift"; sourceTree = "<group>"; };
+		4FCC59352A0A4508003B87A8 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				4FCC591729F8602B003B87A8 /* FeedbackHubApp.swift */,
+				4FCC59352A0A4508003B87A8 /* IssueRow.swift */,
 				4FCC591929F8602B003B87A8 /* ContentView.swift */,
 				4FCC592929F86756003B87A8 /* DataController.swift */,
 				4FCC592F29F96B0C003B87A8 /* Filter.swift */,
@@ -168,6 +171,7 @@
 				4FCC592C29F9667F003B87A8 /* SideBarView.swift in Sources */,
 				4FCC593229FA6E97003B87A8 /* Issue-CoreDataHelper.swift in Sources */,
 				4FCC593429FA6E9F003B87A8 /* Tag-CoreDataHelper.swift in Sources */,
+				4FCC59362A0A4508003B87A8 /* IssueRow.swift in Sources */,
 				4FCC591829F8602B003B87A8 /* FeedbackHubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
