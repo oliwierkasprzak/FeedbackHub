@@ -56,42 +56,44 @@ class DataController: ObservableObject {
     func issuesForSelectedFilter() -> [Issue] {
         let filter = selectedFilter ?? .all
         var predicates = [NSPredicate]()
-        
+
         if let tag = filter.tag {
-            let tagPredicate = NSPredicate(format: "tag CONTAINS %@", tag)
+            let tagPredicate = NSPredicate(format: "tags CONTAINS %@", tag)
             predicates.append(tagPredicate)
         } else {
-          let datePredicate = NSPredicate(format: "modificationDate > %@", filter.minModificationDate as NSDate)
+            let datePredicate = NSPredicate(format: "modificationDate > %@", filter.minModificationDate as NSDate)
             predicates.append(datePredicate)
         }
-        
+
         let trimmedFilterText = filterText.trimmingCharacters(in: .whitespaces)
-        
+
         if trimmedFilterText.isEmpty == false {
             let titlePredicate = NSPredicate(format: "title CONTAINS[c] %@", trimmedFilterText)
             let contentPredicate = NSPredicate(format: "content CONTAINS[c] %@", trimmedFilterText)
             let combinedPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [titlePredicate, contentPredicate])
             predicates.append(combinedPredicate)
         }
-        
+
         if filterTokens.isEmpty == false {
-            let tokenPredicate = NSPredicate(format: "ANY tags IN %@", filterTokens)
-            predicates.append(tokenPredicate)
+            for filterToken in filterTokens {
+                let tokenPredicate = NSPredicate(format: "tags CONTAINS %@", filterToken)
+                predicates.append(tokenPredicate)
+            }
         }
-        
+
         if filterEnabled {
             if filterPriority >= 0 {
-                let priority = NSPredicate(format: "priority = %d", filterPriority)
-                predicates.append(priority)
+                let priorityFilter = NSPredicate(format: "priority = %d", filterPriority)
+                predicates.append(priorityFilter)
             }
-            
+
             if filterStatus != .all {
                 let lookForClosed = filterStatus == .closed
                 let statusFilter = NSPredicate(format: "completed = %@", NSNumber(value: lookForClosed))
                 predicates.append(statusFilter)
             }
         }
-        
+
         let request = Issue.fetchRequest()
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: sortNewestFirst)]
@@ -125,23 +127,23 @@ class DataController: ObservableObject {
     
     func sampleData() {
         let viewContext = container.viewContext
-        
+
         for i in 1...5 {
             let tag = Tag(context: viewContext)
             tag.id = UUID()
             tag.name = "Tag \(i)"
-            
+
             for j in 1...10 {
                 let issue = Issue(context: viewContext)
                 issue.title = "Issue \(i)-\(j)"
-                issue.content = "Description to be created"
-                issue.completed = Bool.random()
+                issue.content = "Description goes here"
                 issue.creationDate = .now
+                issue.completed = Bool.random()
                 issue.priority = Int16.random(in: 0...2)
                 tag.addToIssues(issue)
             }
         }
-        
+
         try? viewContext.save()
     }
     
@@ -194,5 +196,27 @@ class DataController: ObservableObject {
         let difference = allTagsSet.symmetricDifference(issue.issueTags)
         
         return difference.sorted()
+    }
+    
+    func addTag() {
+        let tag = Tag(context: container.viewContext)
+        tag.id = UUID()
+        tag.name = "New Tag"
+        save()
+    }
+    
+    func addIssues() {
+        let issue = Issue(context: container.viewContext)
+        issue.issueTitle = "New issue"
+        issue.creationDate = .now
+        issue.priority = 1
+        
+        if let tag = selectedFilter?.tag {
+            issue.addToTags(tag)
+        }
+        
+        save()
+        
+        selectedIssue = issue
     }
 }
