@@ -21,6 +21,11 @@
 		4FCC59362A0A4508003B87A8 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59352A0A4508003B87A8 /* IssueRow.swift */; };
 		4FCC59382A0A51C6003B87A8 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59372A0A51C6003B87A8 /* IssueView.swift */; };
 		4FCC593A2A0A51D4003B87A8 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59392A0A51D3003B87A8 /* NoIssueView.swift */; };
+		4FCC593C2A0D072D003B87A8 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC593B2A0D072D003B87A8 /* Bundle-Decodable.swift */; };
+		4FCC593F2A0D0F26003B87A8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC593D2A0D0F25003B87A8 /* Colors.xcassets */; };
+		4FCC59402A0D0F26003B87A8 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC593E2A0D0F26003B87A8 /* Awards.json */; };
+		4FCC59422A0E6D00003B87A8 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59412A0E6D00003B87A8 /* Award.swift */; };
+		4FCC59442A0E6DD0003B87A8 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59432A0E6DD0003B87A8 /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		4FCC59352A0A4508003B87A8 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		4FCC59372A0A51C6003B87A8 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		4FCC59392A0A51D3003B87A8 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
+		4FCC593B2A0D072D003B87A8 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = SOURCE_ROOT; };
+		4FCC593D2A0D0F25003B87A8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4FCC593E2A0D0F26003B87A8 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		4FCC59412A0E6D00003B87A8 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		4FCC59432A0E6DD0003B87A8 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,9 @@
 		4FCC591629F8602B003B87A8 /* FeedbackHub */ = {
 			isa = PBXGroup;
 			children = (
+				4FCC593B2A0D072D003B87A8 /* Bundle-Decodable.swift */,
+				4FCC59412A0E6D00003B87A8 /* Award.swift */,
+				4FCC59432A0E6DD0003B87A8 /* AwardsView.swift */,
 				4FCC591729F8602B003B87A8 /* FeedbackHubApp.swift */,
 				4FCC59352A0A4508003B87A8 /* IssueRow.swift */,
 				4FCC591929F8602B003B87A8 /* ContentView.swift */,
@@ -83,7 +96,9 @@
 				4FCC59372A0A51C6003B87A8 /* IssueView.swift */,
 				4FCC59392A0A51D3003B87A8 /* NoIssueView.swift */,
 				4FCC592D29F96685003B87A8 /* DetailView.swift */,
+				4FCC593E2A0D0F26003B87A8 /* Awards.json */,
 				4FCC592629F8627C003B87A8 /* Main.xcdatamodeld */,
+				4FCC593D2A0D0F25003B87A8 /* Colors.xcassets */,
 				4FCC591B29F8602D003B87A8 /* Assets.xcassets */,
 				4FCC591D29F8602D003B87A8 /* FeedbackHub.entitlements */,
 				4FCC591E29F8602D003B87A8 /* Preview Content */,
@@ -157,6 +172,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCC593F2A0D0F26003B87A8 /* Colors.xcassets in Resources */,
+				4FCC59402A0D0F26003B87A8 /* Awards.json in Resources */,
 				4FCC592029F8602D003B87A8 /* Preview Assets.xcassets in Resources */,
 				4FCC591C29F8602D003B87A8 /* Assets.xcassets in Resources */,
 			);
@@ -170,9 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCC593029F96B0C003B87A8 /* Filter.swift in Sources */,
+				4FCC59422A0E6D00003B87A8 /* Award.swift in Sources */,
+				4FCC59442A0E6DD0003B87A8 /* AwardsView.swift in Sources */,
 				4FCC592829F8627C003B87A8 /* Main.xcdatamodeld in Sources */,
 				4FCC592E29F96685003B87A8 /* DetailView.swift in Sources */,
 				4FCC592A29F86756003B87A8 /* DataController.swift in Sources */,
+				4FCC593C2A0D072D003B87A8 /* Bundle-Decodable.swift in Sources */,
 				4FCC591A29F8602B003B87A8 /* ContentView.swift in Sources */,
 				4FCC592C29F9667F003B87A8 /* SideBarView.swift in Sources */,
 				4FCC593229FA6E97003B87A8 /* Issue-CoreDataHelper.swift in Sources */,
