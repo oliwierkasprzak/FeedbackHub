@@ -44,12 +44,19 @@ struct SideBarView: View {
                                 } label: {
                                     Label("Rename", systemImage: "pencil")
                                 }
+                                
+                                Button(role: .destructive) {
+                                    delete(filter)
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
                             }
                     }
                 }
                 .onDelete(perform: delete)
             }
         }
+        .navigationTitle("Filters")
         .toolbar {
             #if DEBUG
             Button {
@@ -83,6 +90,12 @@ struct SideBarView: View {
             let item = tags[offset]
             dataController.deleteObject(item)
         }
+    }
+    
+    func delete(_ filter: Filter) {
+        guard let tag = filter.tag else { return }
+        dataController.deleteObject(tag)
+        dataController.save()
     }
     
     func rename(_ filter: Filter) {
