@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct AwardsView: View {
+    @EnvironmentObject var dataController: DataController
+    
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
+    
+    @State private var selectedAward = Award.example
+    @State private var showingAwardDetails = false
     
     var body: some View {
         NavigationStack {
@@ -25,7 +30,7 @@ struct AwardsView: View {
                                 .scaledToFit()
                                 .padding()
                                 .frame(width: 100, height: 100)
-                                .foregroundColor(.secondary.opacity(0.5))
+                                .foregroundColor(dataController.hasEarned(award: award) ? Color(award.color) : .secondary.opacity(0.5))
                         }
                     }
                 }
