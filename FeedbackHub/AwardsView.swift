@@ -17,13 +17,22 @@ struct AwardsView: View {
     @State private var selectedAward = Award.example
     @State private var showingAwardDetails = false
     
+    var awardTitle: String {
+        if dataController.hasEarned(award: selectedAward) {
+            return "Unlocked: \(selectedAward.name)"
+        } else {
+            return "Locked"
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(Award.allAwards) { award in
                         Button {
-                            
+                            selectedAward = award
+                            showingAwardDetails = true
                         } label: {
                             Image(systemName: award.image)
                                 .resizable()
@@ -36,6 +45,10 @@ struct AwardsView: View {
                 }
             }
             .navigationTitle("Awards")
+            .alert(awardTitle, isPresented: $showingAwardDetails) {
+            } message: {
+                Text(selectedAward.description)
+            }
         }
     }
 }
