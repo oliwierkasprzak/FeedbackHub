@@ -7,3 +7,4 @@ Already covered/coded parts of the application:
 - Issue and Tag adding
 - Working core functionality of implementing an issue
 - Sorting and filtering 
+- Awards system
