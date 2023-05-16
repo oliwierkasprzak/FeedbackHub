@@ -53,7 +53,7 @@ struct SideBarView: View {
                             }
                             .accessibilityElement()
                             .accessibilityLabel(filter.name)
-                            .accessibilityHint("^[\(filter.activeIssuesCount) issue](inflect: true)")
+                            .accessibilityHint("\(filter.activeIssuesCount) issue")
                     }
                 }
                 .onDelete(perform: delete)

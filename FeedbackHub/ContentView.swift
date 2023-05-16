@@ -63,7 +63,7 @@ struct ContentView: View {
                     .symbolVariant(dataController.filterEnabled ? .fill : .none)
             }
             Button(action: dataController.addIssues) {
-                Label("New issue", systemImage: "square.and.pencil")
+                Label("New Issue", systemImage: "square.and.pencil")
             }
         }
     }
