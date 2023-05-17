@@ -8,3 +8,4 @@ Already covered/coded parts of the application:
 - Working core functionality of implementing an issue
 - Sorting and filtering 
 - Awards system
+- Polish language added
