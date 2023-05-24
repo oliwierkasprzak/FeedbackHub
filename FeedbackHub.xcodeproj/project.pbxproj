@@ -28,6 +28,12 @@
 		4FCC59492A13ADD3003B87A8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC594B2A13ADD3003B87A8 /* Localizable.strings */; };
 		4FCC594D2A13AE53003B87A8 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC594F2A13AE53003B87A8 /* Localizable.stringsdict */; };
 		4FCC59512A13AF11003B87A8 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC59532A13AF11003B87A8 /* Awards.json */; };
+		4FCC59B32A1E6167003B87A8 /* SideBarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59B22A1E6167003B87A8 /* SideBarViewToolbar.swift */; };
+		4FCC59B52A1E6845003B87A8 /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59B42A1E6845003B87A8 /* IssueViewToolbar.swift */; };
+		4FCC59B72A1E68E3003B87A8 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59B62A1E68E3003B87A8 /* ContentViewToolbar.swift */; };
+		4FCC59B92A1E79D6003B87A8 /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59B82A1E79D6003B87A8 /* TagsMenuView.swift */; };
+		4FCC59BB2A1E7AD8003B87A8 /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59BA2A1E7AD8003B87A8 /* SmartFilterRow.swift */; };
+		4FCC59BD2A1E7CC9003B87A8 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC59BC2A1E7CC9003B87A8 /* UserFilterRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,12 @@
 		4FCC59502A13AE5B003B87A8 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		4FCC59522A13AF11003B87A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		4FCC59542A13AF13003B87A8 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/Awards.json; sourceTree = "<group>"; };
+		4FCC59B22A1E6167003B87A8 /* SideBarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewToolbar.swift; sourceTree = "<group>"; };
+		4FCC59B42A1E6845003B87A8 /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		4FCC59B62A1E68E3003B87A8 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		4FCC59B82A1E79D6003B87A8 /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		4FCC59BA2A1E7AD8003B87A8 /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		4FCC59BC2A1E7CC9003B87A8 /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,18 +103,24 @@
 			children = (
 				4FCC593B2A0D072D003B87A8 /* Bundle-Decodable.swift */,
 				4FCC59412A0E6D00003B87A8 /* Award.swift */,
+				4FCC59BC2A1E7CC9003B87A8 /* UserFilterRow.swift */,
 				4FCC59432A0E6DD0003B87A8 /* AwardsView.swift */,
 				4FCC591729F8602B003B87A8 /* FeedbackHubApp.swift */,
 				4FCC59352A0A4508003B87A8 /* IssueRow.swift */,
 				4FCC591929F8602B003B87A8 /* ContentView.swift */,
+				4FCC59B62A1E68E3003B87A8 /* ContentViewToolbar.swift */,
 				4FCC592929F86756003B87A8 /* DataController.swift */,
 				4FCC592F29F96B0C003B87A8 /* Filter.swift */,
 				4FCC592B29F9667F003B87A8 /* SideBarView.swift */,
+				4FCC59B22A1E6167003B87A8 /* SideBarViewToolbar.swift */,
 				4FCC593129FA6E97003B87A8 /* Issue-CoreDataHelper.swift */,
 				4FCC593329FA6E9F003B87A8 /* Tag-CoreDataHelper.swift */,
 				4FCC594B2A13ADD3003B87A8 /* Localizable.strings */,
 				4FCC594F2A13AE53003B87A8 /* Localizable.stringsdict */,
 				4FCC59372A0A51C6003B87A8 /* IssueView.swift */,
+				4FCC59B82A1E79D6003B87A8 /* TagsMenuView.swift */,
+				4FCC59B42A1E6845003B87A8 /* IssueViewToolbar.swift */,
+				4FCC59BA2A1E7AD8003B87A8 /* SmartFilterRow.swift */,
 				4FCC59392A0A51D3003B87A8 /* NoIssueView.swift */,
 				4FCC592D29F96685003B87A8 /* DetailView.swift */,
 				4FCC59532A13AF11003B87A8 /* Awards.json */,
@@ -199,7 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCC593029F96B0C003B87A8 /* Filter.swift in Sources */,
+				4FCC59B92A1E79D6003B87A8 /* TagsMenuView.swift in Sources */,
 				4FCC59422A0E6D00003B87A8 /* Award.swift in Sources */,
+				4FCC59B52A1E6845003B87A8 /* IssueViewToolbar.swift in Sources */,
+				4FCC59BB2A1E7AD8003B87A8 /* SmartFilterRow.swift in Sources */,
 				4FCC59442A0E6DD0003B87A8 /* AwardsView.swift in Sources */,
 				4FCC592829F8627C003B87A8 /* Main.xcdatamodeld in Sources */,
 				4FCC592E29F96685003B87A8 /* DetailView.swift in Sources */,
@@ -209,7 +230,10 @@
 				4FCC592C29F9667F003B87A8 /* SideBarView.swift in Sources */,
 				4FCC593229FA6E97003B87A8 /* Issue-CoreDataHelper.swift in Sources */,
 				4FCC593429FA6E9F003B87A8 /* Tag-CoreDataHelper.swift in Sources */,
+				4FCC59B32A1E6167003B87A8 /* SideBarViewToolbar.swift in Sources */,
+				4FCC59B72A1E68E3003B87A8 /* ContentViewToolbar.swift in Sources */,
 				4FCC59382A0A51C6003B87A8 /* IssueView.swift in Sources */,
+				4FCC59BD2A1E7CC9003B87A8 /* UserFilterRow.swift in Sources */,
 				4FCC593A2A0A51D4003B87A8 /* NoIssueView.swift in Sources */,
 				4FCC59362A0A4508003B87A8 /* IssueRow.swift in Sources */,
 				4FCC591829F8602B003B87A8 /* FeedbackHubApp.swift in Sources */,
