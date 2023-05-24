@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SideBarView: View {
     @EnvironmentObject var dataController: DataController
-    var filters: [Filter] = [.all, .recent]
+    let smartFilters: [Filter] = [.all, .recent]
     
     @State private var tagToRename: Tag?
     @State private var renamingTag = false
@@ -28,64 +28,24 @@ struct SideBarView: View {
     var body: some View {
         List(selection: $dataController.selectedFilter) {
             Section("Smart Filters") {
-                ForEach(filters) { filter in
-                    Label(filter.name, systemImage: filter.icon)
-                }
+                ForEach(smartFilters, content: SmartFilterRow.init)
             }
             
             Section("Tags") {
                 ForEach(tagFilter) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
-                            .badge(filter.activeIssuesCount)
-                            .contextMenu {
-                                Button {
-                                    rename(filter)
-                                } label: {
-                                    Label("Rename", systemImage: "pencil")
-                                }
-                                
-                                Button(role: .destructive) {
-                                    delete(filter)
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-                            }
-                            .accessibilityElement()
-                            .accessibilityLabel(filter.name)
-                            .accessibilityHint("\(filter.activeIssuesCount) issue")
-                    }
+                   UserFilterRow(filter: filter, rename: rename, delete: delete)
                 }
                 .onDelete(perform: delete)
             }
         }
         .navigationTitle("Filters")
-        .toolbar {
-            #if DEBUG
-            Button {
-                dataController.removeAll()
-                dataController.sampleData()
-            } label: {
-                Label("Add samples", systemImage: "flame")
-            }
-            #endif
-            Button(action: dataController.addTag) {
-                Label("Add tag", systemImage: "plus")
-            }
-            
-            Button {
-                showingAwards.toggle()
-            } label: {
-                Label("Awards", systemImage: "rosette")
-            }
-            
-        }
+        .toolbar(content: SideBarViewToolbar.init)
         .alert("Rename tag", isPresented: $renamingTag) {
             Button("OK", action: completeRename)
             Button("Cancel", role: .cancel) { }
             TextField("New name", text: $tagName)
         }
-        .sheet(isPresented: $showingAwards, content: AwardsView.init) 
+        
     }
     
     func delete(_ offsets: IndexSet) {
