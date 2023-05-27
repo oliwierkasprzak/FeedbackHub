@@ -30,7 +30,7 @@ struct IssueView: View {
                     Text("Medium").tag(Int16(1))
                     Text("High").tag(Int16(2))
                 }
-                
+
                TagsMenuView(issue: issue)
             }
 
@@ -60,4 +60,3 @@ struct IssueView_Previews: PreviewProvider {
         IssueView(issue: .example)
     }
 }
-

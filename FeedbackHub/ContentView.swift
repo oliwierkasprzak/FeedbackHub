@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var dataController: DataController
-    
+
     var body: some View {
         List(selection: $dataController.selectedIssue) {
             ForEach(dataController.issuesForSelectedFilter()) { issue in
@@ -30,7 +30,7 @@ struct ContentView: View {
             dataController.deleteObject(item)
         }
     }
-} 
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
