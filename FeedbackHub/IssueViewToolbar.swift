@@ -17,20 +17,21 @@ struct IssueViewToolbar: View {
             } label: {
                 Label("Copy Issue Title", systemImage: "doc.on.doc")
             }
-            
+
             Button {
                 issue.completed.toggle()
                 dataController.save()
             } label: {
-                Label(issue.completed ? "Re-open Issue" : "Closed Issue", systemImage: "bubble.left.and.exclamationmark.bubble.right")
+                let systemImage = "bubble.left.and.exclamationmark.bubble.right"
+                Label(issue.completed ? "Re-open Issue" : "Closed Issue", systemImage: systemImage )
             }
-            
+
             Divider()
-            
+
             Section("Tags") {
                 TagsMenuView(issue: issue)
             }
-            
+
         } label: {
             Label("Action", systemImage: "ellipsis.circle")
         }
