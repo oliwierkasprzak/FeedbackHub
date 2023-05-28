@@ -9,3 +9,6 @@ Already covered/coded parts of the application:
 - Sorting and filtering 
 - Awards system
 - Polish language added
+- SwiftLint 
+
+
